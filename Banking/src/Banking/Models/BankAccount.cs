@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace Banking.Models
 {
-    public class BankAccount
+    public class BankAccount : IBankAccount
     {
         private string _accountNumber;
-        private decimal Balance { get; set; }
+        public decimal Balance { get; set; }
 
-        private string AccountNumber
+        public string AccountNumber
         {
             get { return _accountNumber; }
             set { _accountNumber = value; }
