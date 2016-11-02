@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{254F2A18-2C03-4994-B6CD-373C0ADA2D28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FDD451BA-A2D9-43CA-B41F-923776CF6ABB}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BlackJackGame", "src\BlackJackGame\BlackJackGame.xproj", "{AF9E1F64-3898-4B2B-9D48-AFBDF95A9A5D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0D0AB01E-FEC7-4F8F-B308-8F5151073A11}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "BlackJackGame.Tests", "test\BlackJackGame.Tests\BlackJackGame.Tests.xproj", "{57A16BC4-ED4F-4F2E-B960-2D9878B1D5FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF9E1F64-3898-4B2B-9D48-AFBDF95A9A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9E1F64-3898-4B2B-9D48-AFBDF95A9A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9E1F64-3898-4B2B-9D48-AFBDF95A9A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9E1F64-3898-4B2B-9D48-AFBDF95A9A5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57A16BC4-ED4F-4F2E-B960-2D9878B1D5FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57A16BC4-ED4F-4F2E-B960-2D9878B1D5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57A16BC4-ED4F-4F2E-B960-2D9878B1D5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57A16BC4-ED4F-4F2E-B960-2D9878B1D5FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AF9E1F64-3898-4B2B-9D48-AFBDF95A9A5D} = {254F2A18-2C03-4994-B6CD-373C0ADA2D28}
+		{57A16BC4-ED4F-4F2E-B960-2D9878B1D5FD} = {0D0AB01E-FEC7-4F8F-B308-8F5151073A11}
+	EndGlobalSection
+EndGlobal
