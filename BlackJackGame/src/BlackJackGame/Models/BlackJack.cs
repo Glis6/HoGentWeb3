@@ -7,61 +7,95 @@ namespace BlackJackGame.Models
 {
     public class BlackJack
     {
-        public bool FaceDown;
+        private const bool FaceDown = false;
 
-        public bool FaceUp;
+        private const bool FaceUp = true;
 
-        public Hand PlayerHand;
+        public Hand PlayerHand = new Hand();
 
-        public Hand DealerHand;
+        public Hand DealerHand = new Hand();
 
-        public Deck _deck;
+        public Deck _deck = new Deck();
 
         public GameState GameState;
 
         public BlackJack() : this(new Deck())
         {
-
         }
 
         public BlackJack(Deck deck)
         {
             _deck = deck;
+            Deal();
         }
 
         public void AddCardToHand(Hand hand, bool faceUp)
         {
-            throw new NotImplementedException();
+            try
+            {
+                BlackJackCard blackJackCard = _deck.Draw();
+                if (faceUp != blackJackCard.FaceUp)
+                    blackJackCard.TurnCard();
+                hand.AddCard(blackJackCard);
+            }
+            catch (InvalidOperationException)
+            {
+                AdjustGameState(GameState.GameOver);
+            }
         }
 
         public void AdjustGameState(GameState? gameState)
         {
-            throw new NotImplementedException();
+            if (gameState.HasValue)
+                GameState = gameState.Value;
+            if(PlayerHand.Value >= 21 || DealerHand.Value >= 21 || DealerHand.Value > PlayerHand.Value)
+                GameState = GameState.GameOver;
         }
 
         public void Deal()
         {
-            throw new NotImplementedException();
+            AddCardToHand(DealerHand, FaceUp);
+            AddCardToHand(DealerHand, FaceDown);
+            AddCardToHand(PlayerHand, FaceUp);
+            AddCardToHand(PlayerHand, FaceUp);
+            AdjustGameState(GameState.PlayerPlays);
         }
 
-        public string GameSummany()
+        public string GameSummary()
         {
-            throw new NotImplementedException();
+            if (GameState != GameState.GameOver)
+                return null;
+            if (PlayerHand.Value == DealerHand.Value)
+                return "Equal, dealer wins";
+            if (PlayerHand.Value > 21)
+                return "Player burned, dealer wins";
+            if (DealerHand.Value > 21)
+                return "Dealer burned, player wins";
+            return DealerHand.Value > PlayerHand.Value ? "Dealer wins": "BLACKJACK";
         }
 
         public void GivePlayerAnotherCard()
         {
-            throw new NotImplementedException();
+            if(GameState != GameState.PlayerPlays)
+                throw new InvalidOperationException();
+            AddCardToHand(PlayerHand, FaceUp);
+            AdjustGameState(GameState.DealerPlays);
         }
 
         public void LetDealerFinalize()
         {
-            throw new NotImplementedException();
+            while (GameState != GameState.GameOver)
+            {
+                AddCardToHand(DealerHand, FaceUp);
+                AdjustGameState(GameState.DealerPlays);
+            }
         }
 
         public void PassToDealer()
         {
-            throw new NotImplementedException();
+            AdjustGameState(GameState.DealerPlays);
+            DealerHand.TurnAllCardsFaceUp();
+            LetDealerFinalize();
         }
     }
 }

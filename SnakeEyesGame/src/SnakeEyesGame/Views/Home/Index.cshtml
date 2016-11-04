@@ -1,0 +1,23 @@
+﻿@model SnakeEyesGame.Models.SnakeEyes
+
+<!doctype html>
+<html>
+<head>
+    <link href="~/site.css" rel="stylesheet" />
+    <title>Snake Eyes - By Gilles Vercammen</title>
+</head>
+<body>
+<h1>Snake Eyes</h1>
+<p>Keep going but don't get 2 one's</p>
+<span class="snakeEye">@Model.Eye1</span>
+<span class="snakeEye">@Model.Eye2</span>
+    <form asp-controller="Home" asp-action="Play" method="post">
+        <input id="buttonPlay" type="submit" value="Play" />
+    </form>
+<p>Total: @Model.Total</p>
+@if (Model.HasSnakeEyes)
+{
+    <span class="comment">Oeps you did it again!</span>
+}
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{34214B00-F14C-4354-B52B-2373AA6E15B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D7015DD8-8375-4DFA-8B98-CFEA37AADCBA}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SnakeEyesGame", "src\SnakeEyesGame\SnakeEyesGame.xproj", "{1B9AD68C-E9DB-452F-92E4-33916A8C14C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B9AD68C-E9DB-452F-92E4-33916A8C14C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B9AD68C-E9DB-452F-92E4-33916A8C14C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B9AD68C-E9DB-452F-92E4-33916A8C14C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B9AD68C-E9DB-452F-92E4-33916A8C14C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1B9AD68C-E9DB-452F-92E4-33916A8C14C4} = {34214B00-F14C-4354-B52B-2373AA6E15B4}
+	EndGlobalSection
+EndGlobal
