@@ -15,12 +15,12 @@ namespace SportsStore.Models
         public string FirstName { get; set; }
         public string Street { get; set; }
         public City City { get; set; }
-        //public ICollection<Order> Orders { get; set; }
+        public ICollection<Order> Orders { get; set; }
         #endregion
 
         protected Customer()
         {
-          //  Orders = new List<Order>();
+            Orders = new List<Order>();
         }
 
         public Customer(string customerName, string name, string firstName, string street, City city) : this()
@@ -38,10 +38,10 @@ namespace SportsStore.Models
         }
 
         #region Methods
-        //public void PlaceOrder(Cart cart, DateTime? deliveryDate, bool giftwrapping, string shippingStreet, City shippingCity)
-        //{
-        //    Orders.Add(new Order(cart, deliveryDate, giftwrapping, shippingStreet, shippingCity));
-        //}
+        public void PlaceOrder(Cart cart, DateTime? deliveryDate, bool giftwrapping, string shippingStreet, City shippingCity)
+        {
+            Orders.Add(new Order(cart, deliveryDate, giftwrapping, shippingStreet, shippingCity));
+        }
         #endregion
     }
 }
