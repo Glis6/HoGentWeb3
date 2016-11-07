@@ -10,6 +10,7 @@ namespace SportStore.Data
     public class ApplicationDbContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<City> Cities { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

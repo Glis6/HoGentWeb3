@@ -16,18 +16,19 @@ namespace SportStore.Migrations
                     ProductId = table.Column<int>()
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Description = table.Column<string>(nullable: true),
-                    Name = table.Column<string>(maxLength:100),
+                    Name = table.Column<string>(maxLength: 100),
                     Price = table.Column<decimal>()
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Products", x => x.ProductId);
+                    table.PrimaryKey("PK_Product", x => x.ProductId);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable("Products");
+            migrationBuilder.DropTable(
+                "Product");
         }
     }
 }
