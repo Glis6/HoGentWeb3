@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2C8E574F-ACF3-4772-8B1D-1D446B478BDA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D21A3884-DD57-459E-BECE-881C109ACBAB}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Bierhall", "src\Bierhall\Bierhall.xproj", "{00DCAE1C-1F69-474C-8239-2775D87BCAB6}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Bierhall.Test", "src\Bierhall.Test\Bierhall.Test.xproj", "{82239080-3250-4EF2-B2A2-E47B89A8B24F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7F3722E4-5C1B-4B83-B53E-22C953998E68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00DCAE1C-1F69-474C-8239-2775D87BCAB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00DCAE1C-1F69-474C-8239-2775D87BCAB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00DCAE1C-1F69-474C-8239-2775D87BCAB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00DCAE1C-1F69-474C-8239-2775D87BCAB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82239080-3250-4EF2-B2A2-E47B89A8B24F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82239080-3250-4EF2-B2A2-E47B89A8B24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82239080-3250-4EF2-B2A2-E47B89A8B24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82239080-3250-4EF2-B2A2-E47B89A8B24F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{00DCAE1C-1F69-474C-8239-2775D87BCAB6} = {2C8E574F-ACF3-4772-8B1D-1D446B478BDA}
+		{82239080-3250-4EF2-B2A2-E47B89A8B24F} = {7F3722E4-5C1B-4B83-B53E-22C953998E68}
+	EndGlobalSection
+EndGlobal
