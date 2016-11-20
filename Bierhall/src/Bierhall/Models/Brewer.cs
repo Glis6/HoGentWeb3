@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace BeerhallEF.Models
 {
@@ -7,6 +9,7 @@ namespace BeerhallEF.Models
     {
         #region Properties
 
+        [Key]
         public int BrewerId { get; set; }
 
         public string Name { get; set; }
